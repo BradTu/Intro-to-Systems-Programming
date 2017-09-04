@@ -3,7 +3,7 @@
 //  Homework3
 //
 //  Created by Ben Jones on 1/6/17.
-//  Copyright © 2017 Ben Jones. All rights reserved.
+//  Copyright Â© 2017 Ben Jones. All rights reserved.
 //
 
 //Edited by Brad Tully
@@ -104,7 +104,7 @@ void ExtractFace(int x, int y, int z, FaceType face, Triangle& t1, Triangle& t2)
 		break;
 	}
 }
-
+//Brad Tully
 void WriteTriangle(FILE* f, const Triangle& t) {
 	fwrite(t.normal, sizeof(float), 3, f);
 	fwrite(t.v1, sizeof(float), 3, f);
@@ -113,12 +113,12 @@ void WriteTriangle(FILE* f, const Triangle& t) {
 	uint16_t zero = 0;
 	fwrite(&zero, sizeof(zero), 1, f);
 }
-
+//Brad Tully
 //Stores the x and y values of the chunk of work
 struct ThreadWork {
 	int x, y;
 };
-
+//Brad Tully
 //Writes the triangles to an array
 void WorkerThread(VoxelShape model, int x, int y, MyArray<Triangle>* t) {
 	Triangle t1, t2;
@@ -169,7 +169,7 @@ void WorkerThread(VoxelShape model, int x, int y, MyArray<Triangle>* t) {
 		}
 	}
 }
-
+//Brad Tully
 //Takes the work from the queue and saves it to an array
 void MainThread(VoxelShape model, MyArray<Triangle>* t, SharedQueue<ThreadWork>* sq, std::mutex* lock) {
 	ThreadWork tw = { NULL };
@@ -198,7 +198,7 @@ void MainThread(VoxelShape model, MyArray<Triangle>* t, SharedQueue<ThreadWork>*
 	}
 	lock->unlock();
 }
-
+//Brad Tully
 //Writes triangles to an stl file with multiple threads
 void WriteSTL(const VoxelShape &model, const char* filename) {
 
@@ -268,7 +268,7 @@ void WriteSTL(const VoxelShape &model, const char* filename) {
 	fclose(f);
 
 }
-
+//Brad Tully
 //Writes triangles to file with one thread
 void SlowWriteSTL(const VoxelShape &model, const char* filename) {
 
