@@ -1,5 +1,7 @@
 # Intro-to-Systems-Programming
 
+All of the following assignments build off of eachother. Some of the code was provided by Ben Jones.
+
 ## Homework2
 
 Creates a 64 bit (4 * 4 * 4) 3D voxel shape
