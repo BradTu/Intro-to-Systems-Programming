@@ -1,7 +1,7 @@
 //
 //  SharedQueue.h
 //  Lab12
-//
+//  Written by Ben Jones
 
 #ifndef __Lab12__SharedQueue__
 #define __Lab12__SharedQueue__
