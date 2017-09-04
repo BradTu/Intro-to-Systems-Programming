@@ -1,7 +1,7 @@
 //
 //  BitVector.hpp
 //  Homework 5
-//
+//  Written by Ben Jones
 #define NOMINMAX
 #ifndef BitVector_hpp
 #define BitVector_hpp
