@@ -1,6 +1,6 @@
 # Intro-to-Systems-Programming
 
-All of the following assignments build off of eachother. Some of the code was provided by Ben Jones.
+All of the following assignments build off of eachother. Some of the code was provided by Ben Jones and Nathan Sturtevant.
 
 ## Homework2
 
