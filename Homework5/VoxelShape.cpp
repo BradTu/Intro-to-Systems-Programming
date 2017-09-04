@@ -60,7 +60,7 @@ void VoxelShape::toggleBit(int x, int y, int z) {
 		bitVec->setBit(index, true);
 	}
 }
-
+//Written by Ben Jones with edits from Brad Tully
 //Adds a sphere shape to the model
 void VoxelShape::addSphere(float x, float y, float z, float r) {
 	int index = 0;
@@ -81,7 +81,7 @@ void VoxelShape::addSphere(float x, float y, float z, float r) {
 		}
 	}
 }
-
+//Written by Ben Jones with edits from Brad Tully
 //Removes a sphere shape from the model
 void VoxelShape::subtractSphere(float x, float y, float z, float r) {
 	int minX = std::max(0, static_cast<int>(x - r));
@@ -101,7 +101,7 @@ void VoxelShape::subtractSphere(float x, float y, float z, float r) {
 		}
 	}
 }
-
+//Written by Ben Jones with edits from Brad Tully
 //Toggles a shpere shape in the model
 void VoxelShape::toggleSphere(float x, float y, float z, float r) {
 	int minX = std::max(0, static_cast<int>(x - r));
@@ -132,7 +132,7 @@ void VoxelShape::toggleSphere(float x, float y, float z, float r) {
 int VoxelShape::getIndex(int x, int y, int z) {
 	return x * ny * nz + y * nz + z;
 }
-
+//FaceType Written by Ben Jones
 enum FaceType {
 	NX,
 	NY,
@@ -141,14 +141,14 @@ enum FaceType {
 	PY,
 	PZ
 };
-
+//Triangle Written by Ben Jones
 struct Triangle {
 	float normal[3];
 	float v1[3];
 	float v2[3];
 	float v3[3];
 };
-
+//fillPlane Written by Ben Jones
 inline void fillPlane(int a1, int a2, int b1, int b2, int c, int cInd, Triangle& t1, Triangle& t2) {
 	t1.v1[cInd] = c;
 	t2.v1[cInd] = c;
@@ -176,7 +176,7 @@ inline void fillPlane(int a1, int a2, int b1, int b2, int c, int cInd, Triangle&
 	t2.v3[bInd] = b2;
 
 }
-
+//extractFace Written by Ben Jones
 void extractFace(int x, int y, int z, FaceType face, Triangle& t1, Triangle& t2) {
 	for (int i = 0; i < 3; i++) {
 		t1.normal[i] = 0;
