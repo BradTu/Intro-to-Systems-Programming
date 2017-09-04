@@ -1,7 +1,7 @@
 //
 //  BitVector.cpp
 //  Homework 5
-//
+//  Written by Ben Jones
 #define NOMINMAX
 #include "BitVector.hpp"
 
